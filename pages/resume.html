@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .main_container {
+            padding: 10px;
+            width: 100%;
+            border-style:ridge
+            border-color: black;
+        }
+
+        .box1 {
+            border-style: none;
+            border-color: red;
+            display: inline-block;
+            width: 45%;
+            padding: 2px;
+
+        }
+
+        .box2 {
+            border-style: none;
+            border-color: pink;
+            display: inline-block;
+            width: 15%;
+            padding: 1px;
+
+        }
+
+        .box3 {
+            border-style: none;
+            border-color: green;
+            padding: 2px;
+            width: 97%
+        }
+
+        .box4 {
+            border-style: none;
+            border-color: green;
+            padding: 2px;
+            width: 45%;
+            display: inline-block;
+        }
+
+        .box5 {
+            text-align: left;
+            font-size: 15px;
+            color: black;
+            border-style: none;
+            border-color: pink;
+            display: inline-block;
+            width: 30%;
+            padding: px;
+        }
+
+        .progressBar {
+            height: 15px;
+            border-radius: 0%;
+        }
+
+        #progressBar1::-moz-progress-bar {
+            background: yellow;
+        }
+
+        #progressBar1::-webkit-progress-value {
+            background: yellow;
+        }
+
+        #progressBar1 {
+            color: yellow;
+        }
+
+        #progressBar2::-moz-progress-bar {
+            background: blue;
+        }
+
+        #progressBar2::-webkit-progress-value {
+            background: blue;
+        }
+
+        #progressBar2 {
+            color: blue;
+        }
+
+        #progressBar3::-moz-progress-bar {
+            background: green;
+        }
+
+        #progressBar3::-webkit-progress-value {
+            background: green;
+        }
+
+        #progressBar3 {
+            color: green;
+        }
+        
+        .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color:red; /* Set your desired background color */
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3; /* Set your desired checked color */
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    /* Additional styling for the checkmark (e.g., shape, color) */
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+    /* Additional styling for the checkmark when checked */
+}
+.radio-container input[type="radio"]:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        left: -1px;
+        position:relative;
+        background-color: blue;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        }
+        .radio-container1 input[type="radio"]:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        left: -1px;
+        position:relative;
+        background-color: red;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        }
+        .radio-container2 input[type="radio"]:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        left: -1px;
+        position:relative;
+        background-color:yellow;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="main_container">
+        <div class="section1">
+            <div class="box1">
+                <div class="contact-image">
+                    <img src="../images/resume.jpg" alt="Profile Pic" />
+                </div>
+                <div class="contact-name">
+                    <h1>Sarah Jessica</h1>
+                    <p class="job-title">Full Stack Developer</p>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="contact-info">
+                    <p>Email: your@email.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></p>
+                </div>
+            </div>
+            <div class="box3">
+                <p>My name is Sarah Jessica. I hold a master’s degree in VLSI & Embedded Systems and am certified in
+                    Software Quality Assurance.
+                    During my tenure as a QA Intern at TestPro, I gained hands-on experience in various testing domains,
+                    including UI testing, API testing, and Database Testing. As a result, I understand the importance of
+                    thorough testing,
+                    code reviews, and adherence to best practices to resolve
+                    issues during development.
+                </p>
+            </div>
+            <div class="section2">
+                <div class="box4">
+                    <h2>EMPLOYMENT</h2>
+                    <label>
+                        <input type="radio" name="contact" value="QA Analyst" />
+                        Software Developer | XYZ Tech Solutions
+                        <ul>
+                            <li>
+                                Collaborated with cross-functional teams to design and develop a customer portal using
+                                Spring Boot and React.
+                                Implemented RESTful APIs for user authentication, profile management, and order
+                                processing.
+                            <li></li>Optimized database queries, resulting in a 20% reduction in response time.
+                            <li></li>Conducted code reviews and mentored junior developers.
+                            </li>
+                        </ul>
+                    </label>
+                    <h2>EDUCATION</h2>
+                    <label>
+                        <input type="radio" name="education" value="education" />
+                        Masters in Computer Engineering
+                        <ul>
+                            <li>
+                                University of Buffalo
+                                Graduated: May 2020
+                            </li>
+                        </ul>
+
+                </div>
+                <div class="box5">
+                    <div class="skills1">
+                        <h2>PROGRAMMING SKILLS</h2>
+                        <label for="uname"><b>Wordpress</b></label>
+                        <br>
+                        <progress id="progressBar1" class="progressBar" max="100" value="75"></progress><br>
+                        <label for="uname"><b>PHP</b></label>
+                        <br>
+                        <progress id="progressBar2" class="progressBar" max="100" value="80"></progress><br>
+                        <label for="uname"><b>Excel</b></label>
+                        <br>
+                        <progress id="progressBar3" class="progressBar" max="100" value="95"></progress><br>
+                    </div>
+                    <h3>GRAPHIC SKILLS</h3>
+                    <label class="container">
+                        Adobe 
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        Excel
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <h3>LANGUAGE SKILLS</h3>
+                    <div class="radio-container">
+                        <label for="css">English </label>
+                        <input type="radio">
+                        
+            <input type="radio">
+            <input type="radio">
+            <input type="radio">
+            </div>
+            
+            <div class="radio-container1">
+                <label for="css"> Spanish</label>
+            <input type="radio">
+            <input type="radio">
+            <input type="radio">
+            </div>
+            <div class="radio-container2">
+                <label for="css">  French</label>
+                <input type="radio">
+                <input type="radio">
+                <input type="radio">
+                </div>
+                    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
