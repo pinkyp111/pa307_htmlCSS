@@ -5,17 +5,20 @@
     <style>
         .main_container {
             padding: 10px;
-            width: 100%;
-            border-style:ridge;
+            width: 15%;
+            border-style:none;
             border-color: black;
-            background-color:azure;
+            background-color:#ccc
         }
+      
+
+
 
         .box1 {
             border-style: none;
             border-color: red;
             display: inline-block;
-            width: 45%;
+            width: 40%;
             padding: 2px;
 
         }
@@ -23,8 +26,8 @@
         .box2 {
             border-style: none;
             border-color: pink;
-            display: inline-block;
-            width: 15%;
+            display:inline-flexbox;
+            width: 40%;
             padding: 1px;
 
         }
@@ -33,26 +36,26 @@
             border-style: none;
             border-color: green;
             padding: 2px;
-            width: 97%
+            width: 40%
         }
 
         .box4 {
             border-style: none;
             border-color: green;
             padding: 2px;
-            width: 45%;
+            width: 40%;
             display: inline-block;
         }
 
         .box5 {
-            text-align: left;
+            text-align:left;
             font-size: 15px;
             color: black;
             border-style: none;
             border-color: pink;
-            display: inline-block;
-            width: 30%;
-            padding: px;
+            display:flexbox;
+            width: 20%;
+            padding: 1px;
         }
 
         .progressBar {
@@ -151,14 +154,6 @@
     display: block;
     /* Additional styling for the checkmark when checked */
 }
-.radio-container label {
-    display: inline-block;
-    width: 50px;
-}
-.radio-container2 label {
-    display: inline-block;
-    width: 50px;
-}
 .radio-container input[type="radio"]:after {
         width: 15px;
         height: 15px;
@@ -192,6 +187,12 @@
         display: inline-block;
         visibility: visible;
         }
+        @media (min-width: 600px) {
+        .box1, .box2, .box3, .box4, .box5 {
+            width: 75%;
+        }
+        /* Additional responsive styles */
+    }
     </style>
 </head>
 
@@ -260,13 +261,13 @@
                         <h2>PROGRAMMING SKILLS</h2>
                         <label for="uname"><b>Wordpress</b></label>
                         <br>
-                        <progress id="progressBar1" class="progressBar" max="100" value="75"></progress><br>
+                        <progress id="progressBar1" class="progressBar" max="100" value="50"></progress><br>
                         <label for="uname"><b>PHP</b></label>
                         <br>
-                        <progress id="progressBar2" class="progressBar" max="100" value="80"></progress><br>
+                        <progress id="progressBar2" class="progressBar" max="100" value="30"></progress><br>
                         <label for="uname"><b>Excel</b></label>
                         <br>
-                        <progress id="progressBar3" class="progressBar" max="100" value="95"></progress><br>
+                        <progress id="progressBar3" class="progressBar" max="100" value="70"></progress><br>
                     </div>
                     <h3>GRAPHIC SKILLS</h3>
                     <label class="container">
@@ -279,7 +280,7 @@
                         <input type="checkbox">
                         <span class="checkmark"></span>
                     </label>
-                    <h3>LANGUAGE SKILLS</h3>                        
+                    <h3>LANGUAGE SKILLS</h3>
                     <div class="radio-container">
                         <label for="css">English </label>
                         <input type="radio">
@@ -301,8 +302,7 @@
                 <input type="radio">
                 <input type="radio">
                 </div>
-                
-                    </table>
+                    
                     </div>
                     </div>
                 </div>
